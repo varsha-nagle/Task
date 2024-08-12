@@ -1,0 +1,93 @@
+.container {
+    height: 200px;
+    position: relative;
+    /* border: 3px solid green; */
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #f2f2f2;
+}
+
+.button1 {
+    margin-right: 20px;
+}
+
+.button2 {
+    margin-left: 15px;
+}
+
+.button1, .button2 {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    margin-top: 15px;
+  }
+  
+  .button1 {
+    background-color: #444845; 
+    color: #fff;
+  }
+  
+  .button1:hover {
+    background-color: #5a6268;
+  }
+  
+  .button2 {
+    background-color: #444845; 
+    color: #fff;
+    margin-left: 10px;
+  }
+  
+  .button2:hover {
+    background-color: #5a6268;
+  }
+
+  .update-button, .delete-button, .save-button {
+    padding: 8px 16px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    margin-top: 5px;
+}
+
+.update-button {
+    background-color: #444845; 
+    color: #fff;
+}
+
+.update-button:hover {
+    background-color: #5a6268;
+}
+
+.delete-button {
+    background-color: #444845; 
+    color: #fff;
+    margin-left: 10px;
+}
+
+.delete-button:hover {
+    background-color: #5a6268;
+}
+
+.save-button {
+  background-color: #444845; 
+  color: #fff;
+}
+
+.save-button:hover {
+  background-color: #5a6268;
+}

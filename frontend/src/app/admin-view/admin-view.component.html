@@ -1,0 +1,48 @@
+<div>
+  <table border="1" cellpadding="5" cellspacing="0">
+    <thead>
+      <tr>
+        <!-- Generate table headers dynamically -->
+        <th *ngFor="let column of columns">{{ column | titlecase }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of items; let i = index">
+        <td *ngFor="let column of columns">
+          <ng-container *ngIf="editIndex !== i">
+            {{ column === 'price' ? 'Rs ' + item[column] : item[column] }}
+          </ng-container>
+          <ng-container *ngIf="editIndex === i">
+            <!-- Check if the field is editable or not -->
+            <ng-container *ngIf="column !== 'id' && column !== 'create_time' && column !== 'update_time'">
+              <input
+                type="text"
+                [(ngModel)]="editItem[column]"
+                *ngIf="column !== 'price'"
+              />
+              <input
+                type="number"
+                [(ngModel)]="editItem[column]"
+                *ngIf="column === 'price'"
+              />
+            </ng-container>
+            <ng-container *ngIf="column === 'id' || column === 'create_time' || column === 'update_time'">
+              {{ item[column] }}
+            </ng-container>
+          </ng-container>
+        </td>
+        <td *ngIf="editIndex !== i">
+          <button class="update-button" (click)="onEdit(item, i)">Update</button>
+        </td>
+        <td *ngIf="editIndex === i">
+          <button class="save-button"(click)="onSave(i)">Save</button>
+        </td>
+        <td>
+          <button class="delete-button" (click)="onDelete(item.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <button class="button1" (click)="backtohome($event)">Back to Home</button>
+  <button class="button2" (click)="AddNewItem($event)">Add Item</button>
+</div>

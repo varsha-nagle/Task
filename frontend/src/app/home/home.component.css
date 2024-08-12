@@ -1,0 +1,34 @@
+h1 {
+    font-weight: bold;
+    font-size: xx-large;
+    font-style: normal;
+    text-align: center;
+    color: cadetblue;
+    height: auto;
+    padding-top: 2%;
+}
+
+p{
+    font-weight: bold;
+    font-size: medium;
+    font-style: oblique;
+    color: brown;
+    text-align: center;
+}
+
+button {
+    background-color: #5a6268;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 5%;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-left: 45%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #444845;
+}
