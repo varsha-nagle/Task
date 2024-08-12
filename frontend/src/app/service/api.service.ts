@@ -17,7 +17,8 @@ interface ItemData {
 })
 export class ApiService {
   // backend server information
-  apiURL = 'http://127.0.0.1:8000/api';
+  // apiURL = 'http://127.0.0.1:8000/api';
+  apiURL = 'https://varshanagle.pythonanywhere.com/api';
 
   constructor(private http: HttpClient) { }
 
